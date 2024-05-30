@@ -1,0 +1,238 @@
+*{
+    margin: 1px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: black;
+}
+/*paleta de colores de : https://www.colorhunt.co/palette/0c0c0c481e149b3922f2613f*/
+.volcheader{
+    background: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+}
+.iniciopag{
+    color: antiquewhite;
+}
+.volctitulo{
+    color: #9b3922 ;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    border-bottom: 1px solid #f2613f;
+    font-size: 100px;
+}
+.volcimag1{
+    margin-left: 400px ;
+    transition: 1s all linear;
+    animation: caraRota 3s ease-in-out 1 2s;
+}
+@keyframes caraRota{
+    0%,100%{
+        transform:  translateX(0px) rotate(0deg);
+    }
+    50%{
+        transform: translateX(-350px) rotate(-180deg) ;
+    }
+
+}
+
+.volcmenu{
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+}
+.volcnav{
+    color:whitesmoke;
+    flex: 15%;
+    transition: 2s all ease-in;
+}
+.volcnav:hover{
+    color: peru;
+    border: 1px solid salmon;
+}
+/*Index*/.volcnav0{
+    color:whitesmoke;
+    flex: 14%;
+}
+.volcnav1{
+    color: whitesmoke;
+    flex: 14%;
+    
+}
+.volcmain{
+    background: #481E14;
+    
+}
+.volcimagenesgrid{
+   
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    background-color: #0c0c0c;
+    padding: 10px;
+}
+.volcimagenesgrid > div{
+    width: auto;
+}
+.volcimagenesgrid > div img{
+    text-align: center;
+    font-size: 20px;
+    height: 200px;
+}
+.volchistoria{
+    background: #9b3922;
+    
+}
+p{
+    color: peachpuff;
+    font-size: 25px;
+    border: #f2613f solid 4px;
+}
+ #volciconi{
+    color: peachpuff;
+ }
+ .volcreceta{
+    background: #000;
+    display: flex;
+}
+    .volcarticulos{
+        background: #9b3922;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .volcarticle{
+            background: #0c0c0c;
+            flex: 1 1 40%;
+            color: #9b3922 ;
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            border-bottom: 1px solid #f2613f;
+            font-size: 30px;
+        }
+        .volcarticle >ol li{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .navegacion{
+            background: lightblue;
+            flex: 1 1 100%;
+        }
+    .volcaside{
+        background: pink;
+        flex: 1 1 auto;
+    }
+        .publicidad{
+            background:lightseagreen;
+        }
+
+
+.site-footer{
+        border-top: 1px solid #e1e1e1;
+        margin-top: 5rem;
+        padding-top: 5rem;
+        color: peachpuff;
+      }
+.site-footer h3 {
+        margin-bottom: 2rem;
+      }
+      .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+      }
+      .footer-menu a {
+        display: block;
+      }
+      .copyright {
+        margin-top: 5rem;
+        text-align: center;
+      }
+      /* RECETA */
+      .contenido-titulo {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        column-gap: 4rem;
+      }
+      .informacion-titulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+
+/*De 601 a 800px*/
+@media all and (max-width: 800px){
+        .volctitulo >img{
+            margin-left: 0px;
+        }
+        .volcmenu{
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+        }
+        .volcmedio{
+            flex-direction: column;
+        }
+
+        .index{
+            flex-direction: column;
+            height: auto;
+        }  
+        .volcformu{
+            flex-direction: column;
+        }
+        .volctitulo{
+            font-size: 70px;
+        }
+        .volcimag1{
+            margin-left: 100px ;
+        }
+        .volcimagenesgrid{
+   
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-gap: 10px;
+                background-color: #0c0c0c;
+                width: 90vw;
+            }
+            .volcimagenesgrid > div{
+                height: 175px;
+                width: 300px;
+            }        
+        .volcimagenesgrid > div img{
+                height: 150px;
+                width: 250px;
+            }    
+    }
+    
+    /*De 401 a 600px*/
+    @media all and (max-width: 600px){
+        .volctitulo >img{
+            width: 100px;
+            height: 100px;
+            margin-left: 0px;
+        }
+        .volcimagenesgrid{
+   
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            grid-gap: 10px;
+            width: 90vw;
+        }
+        .volcimagenesgrid > div{
+            text-align: center;
+            
+            height: 150px;
+            width: 320px;
+        }        
+        .volcimagenesgrid > div img{
+            height: 150px;
+            width: 150;
+        }    
+
+    }

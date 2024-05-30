@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="icon" href="img/icono1.ico">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+  </head>
+  <body>
+    <header>
+      <h1 class="nombre-sitio">Recetas <span>Creativas</span></h1>
+    </header>
+    <div class="contenedor-navegacion">
+      <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+    <main class="contenido-principal contenedor">
+      <h2 class="text-center">Contacto</h2>
+      <form action="https://formspree.io/f/xrgnwzwo" method="post" class="formulario">
+        <fieldset>
+          <legend>Datos</legend>
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" placeholder="Nombre" required/>
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Tu asunto" required/>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Tu mail" required/>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="" id="mensaje" name="mensaje" rows="10" cols="20"required></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Pais</legend>
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+              <option value="" disabled selected>-- Seleccione --</option>
+              <option value="AR">Argentina</option>
+              <option value="MX">Mexico</option>
+              <option value="PR">Perú</option>
+              <option value="ES">España</option>
+              <option value="CO">Colombia</option>
+              <option value="CL">Chile</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>¿Te gustaria recibir recetas en tu correo?</legend>
+          <div class="campo">
+            <label for="si">Si</label>
+            <input type="radio" id="si" name="tipo" value="si" required>
+          </div>
+          <div class="campo">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="tipo" value="no" required>
+          </div>
+        </fieldset>
+        <input class="btn" type="submit" value="Enviar Formulario" >
+        <div id="error"></div>
+      </form>
+
+    </main>
+    <footer class="site-footer">
+      <div class="grid-footer contenedor">
+        <div>
+          <h3>Categorias</h3>
+          <nav class="footer-menu">
+            <a href="#">Tartas y Tartaletas</a>
+            <a href="#">Postres de Chocolate</a>
+            <a href="#">Bizcochos y Magdalenas</a>
+            <a href="#">Pasteles de Celebración</a>
+            <a href="#">Postres Sin Gluten o Vegano</a>
+          </nav>
+        </div>
+        <div>
+          <h3>Sobre Nosotros</h3>
+          <nav class="footer-menu">
+            <a href="#">Nuestra historia</a>
+            <a href="#">Lo que Encontrarás Aquí</a>
+            <a href="#">Nuestra Misión</a>
+          </nav>
+        </div>
+      </div>
+      <p class="copyright">todos los derechos reservados, RecetasCreativas</p>
+    </footer>
+    <script src="validacion.js"></script>
+  </body>
+</html>
