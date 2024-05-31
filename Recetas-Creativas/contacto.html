@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"/>
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <header>
@@ -30,12 +25,12 @@
     </div>
     <main class="contenido-principal contenedor">
       <h2 class="text-center">Contacto</h2>
-      <form action="https://formspree.io/f/xrgnwzwo" method="post" class="formulario">
+      <form id="Datos" onsubmit="return validarEnviar()" action="https://formspree.io/f/xrgnwzwo" method="post" class="formulario">
         <fieldset>
           <legend>Datos</legend>
           <div class="campo">
             <label for="nombre">Nombre:</label>
-            <input id="nombre" type="text" placeholder="Nombre" required/>
+            <input name="nombre" id="nombre" type="text" placeholder="Nombre" required/>
           </div>
           <div class="campo">
             <label for="asunto">Asunto:</label>
@@ -47,11 +42,11 @@
           </div>
           <div class="campo">
             <label for="mensaje">Mensaje:</label>
-            <textarea name="" id="mensaje" name="mensaje" rows="10" cols="20"required></textarea>
+            <textarea name="" id="mensaje" name= "mensaje" rows="10" cols="20" required></textarea>
           </div>
         </fieldset>
         <fieldset>
-          <legend>Pais</legend>
+          <legend>País</legend>
           <div class="campo">
             <label for="pais">País:</label>
             <select id="pais" name="pais" required>
@@ -66,7 +61,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>¿Te gustaria recibir recetas en tu correo?</legend>
+          <legend>¿Te gustaría recibir recetas en tu correo?</legend>
           <div class="campo">
             <label for="si">Si</label>
             <input type="radio" id="si" name="tipo" value="si" required>
@@ -77,28 +72,25 @@
           </div>
         </fieldset>
         <input class="btn" type="submit" value="Enviar Formulario" >
-        <div id="error"></div>
       </form>
-
+      <div id="error"></div>
     </main>
     <footer class="site-footer">
       <div class="grid-footer contenedor">
         <div>
-          <h3>Categorias</h3>
+          <h3>Categorías</h3>
           <nav class="footer-menu">
-            <a href="#">Tartas y Tartaletas</a>
-            <a href="#">Postres de Chocolate</a>
-            <a href="#">Bizcochos y Magdalenas</a>
-            <a href="#">Pasteles de Celebración</a>
-            <a href="#">Postres Sin Gluten o Vegano</a>
+            <a href="cheesecake.html">Tartas y Tartaletas</a>
+            <a href="Volcan.html">Postres de Chocolate</a>
+            <a href="cupcakes.html">Bizcochos y Magdalenas</a>
           </nav>
         </div>
         <div>
           <h3>Sobre Nosotros</h3>
           <nav class="footer-menu">
-            <a href="#">Nuestra historia</a>
-            <a href="#">Lo que Encontrarás Aquí</a>
-            <a href="#">Nuestra Misión</a>
+            <a href="nosotros.html">Nuestra historia</a>
+            <a href="nosotros.html">Lo que Encontrarás Aquí</a>
+            <a href="nosotros.html">Nuestra Misión</a>
           </nav>
         </div>
       </div>

@@ -8,40 +8,40 @@ function validarEnviar() {
     var pais = formulario.pais.value;
     var mensajeError = '';
     var mensaje = formulario.mensaje.value;
-    // Validar nombre
+    var tipoReceta = formulario.tipo.value;
+    // validar nombre
     if (nombre.length <= 2) {
         mensajeError += 'Nombre incorrecto. Debe tener más de 2 caracteres.<br>';
     }
-    // Validar asunto
+    // validar asunto
     if (asunto.length < 2) {
-        mensajeError += 'Asunto incompleto.';
+        mensajeError += 'Asunto incompleto.<br>';
     }
-
-    // Validar email
+    // validar email
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         mensajeError += 'Correo electrónico inválido.<br>';
     }
-    // Validar mensaje
+    // validar mensaje
     if (mensaje.length === 0) {
         mensajeError += 'Debe ingresar un mensaje.<br>';
     }
-    // Validar país
+    // validar país
     if (!pais) {
         mensajeError += 'Debe seleccionar un país.<br>';
     }
-    // Validar si desea recibir recetas
+    // validar si desea recibir recetas
     if (!tipoReceta) {
         mensajeError += 'Debe seleccionar si desea recibir recetas.<br>';
     }
-    // Mostrar mensajes de error
+    // mostrar mensajes de error
     if (mensajeError !== '') {
         error.innerHTML = mensajeError;
-        error.style.color = 'red';
+        error.className = 'error';
         return false; // No enviar el formulario
     } else {
         error.innerHTML = 'Gracias por completar el formulario!';
-        error.style.color = 'green';
+        error.className = 'aceptado';
         return true; // Enviar el formulario
     }
 }

@@ -6,7 +6,6 @@ body {
     padding: 0;
     color: #333;
 }
-
 h3, p {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
@@ -14,7 +13,6 @@ h3, p {
 }
 h1, h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
     font-size: 36px;
 }
 header {
@@ -45,7 +43,6 @@ header h1 {
     justify-content: center;
     padding: 10px 0;
 }
-
 .navegacion-principal a {
     color: #333;
     padding: 10px 20px;
@@ -75,7 +72,6 @@ header h1 {
 }
 .imagen {
     flex: 1;
-
 }
 .imagen img {
     width: 80%;
@@ -87,7 +83,11 @@ header h1 {
     max-width: 100%;
  
 }
-
+/*.imagen img.espaciado-imagenes {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+*/
 .informacion-titulo {
     color: #fff;
     flex: 1;
@@ -95,19 +95,25 @@ header h1 {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(255, 253, 253, 0.1);
+    padding: 20px; /* para el borde co el marguen*/
+    margin: 20px;  /* Añadido margin para el espacio entre contenido y borde */
+    margin right: 20px; 
 }
-.informacion-titulo p, {
-    line: height 1.6em;
+.informacion-titulo p.subtitulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .informacion-titulo ul, .informacion-titulo ol {
-    margin: 10px 0;
+    margin:  0;
+    margin right: 10px; 
+    padding-left: 20px;
+    padding-right: 30px;
 }
-
-.informacion-titulo ul, .informacion-titulo ol {
-    padding-left: 10px;
+.informacion-titulo li {
+    margin-bottom: 5px;
 }
-
 .site-footer {
     background-color: #333;
     color: #fff;
@@ -164,17 +170,69 @@ footer p {
       float: none;
       width: 100%;
     }
+    .nombre-sitio {
+        font-size: 2rem;
+    }
+
+    h2.nombre-postre {
+        font-size: 1.8rem;
+    }
+
+    .informacion-titulo p.subtitulo {
+        font-size: 1.1rem;
+    }
+    .informacion-titulo {
+        padding: 15px;  
+    }
   }
   
   @media screen and (max-width: 600px) {
     .contenido-titulo {
       flex-direction: column;
     }
+    .imagen, .informacion-titulo {
+        float: none;
+        width: 100%;
+    }
+
+    .nombre-sitio {
+        font-size: 1.8rem;
+    }
+
+    h2.nombre-postre {
+        font-size: 1.5rem;
+    }
+
+    .informacion-titulo p.subtitulo {
+        font-size: 1rem;
+    }
+    .informacion-titulo {
+        padding: 10px;  
+    }
   }
   
   @media screen and (max-width: 400px) {
     .contenido-titulo {
       flex-direction: column;
+    }
+    .imagen, .informacion-titulo {
+        float: none;
+        width: 100%;
+    }
+
+    .nombre-sitio {
+        font-size: 1.5rem;
+    }
+
+    h2.nombre-postre {
+        font-size: 1.2rem;
+    }
+
+    .informacion-titulo p.subtitulo {
+        font-size: 0.9rem;
+    }
+    .informacion-titulo {
+        padding: 5px;  
     }
   }
   
@@ -191,4 +249,19 @@ footer p {
 @keyframes scaleUp {
     0% { transform: scale(1); }
     100% { transform: scale(1.2); }
+}
+/* Nuevos estilos */
+.nombre-postre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.informacion-titulo .subtitulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.espaciado-imagenes {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
