@@ -13,7 +13,9 @@ body {
   line-height: 2;
   background-color: #d6a3db;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Playfair Display", serif;
   margin: 0 0 2rem 0;
 }
@@ -67,12 +69,9 @@ img {
 .text-center {
   text-align: center;
 }
-
-/*--------
 .max-width-30 {
-  max-width: 30rem; yo sof lo quiero cambiar para probar 
+  max-width: 30rem;
 }
----------------*/
 /* header y navegacion */
 .nombre-sitio {
   margin-top: 5rem;
@@ -89,11 +88,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .navegacion-principal {
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
   }
 }
